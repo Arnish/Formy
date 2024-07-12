@@ -5,7 +5,6 @@ html {
 #everything {
     display: flex; /* this makes the right side... go to the right */
     height: 90vh;
-    border-radius: 10px;
     /* border: 3px solid blue; */
     max-width: 70vw;
     margin: 0;
@@ -16,21 +15,44 @@ html {
     transform: translate(-50%, -50%);
 }
 
-
 #leftImageCont {
-    background-color: beige;
     width: 20vw;
-    border: 2px solid black;
+}
+
+#leftImageCont img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* this crops the image instead of scaling it down to fit the container */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid white;
 }
 
 #rightSide {
     display: flex;
     flex-direction: column;
+    border: 2px solid white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 90vh; /*not sure why i had to re-state this here for it to be aligned with the left */
 }
 
 main > div{
-    background-color: grey;
-    border: 2px solid black;
-    height: calc(98.5vh/3); /* this makes all the divs even on the right side */
+    height: calc(100%/3); /* this makes all the divs even on the right side */
     width: 50vw;
+    border-style: none;
+}
+
+#topRightCont {
+    background-image: linear-gradient(#024059, #21788B);
+    border-top-right-radius: 10px;
+}
+
+#middleRightCont {
+    background-image: linear-gradient( #21788B , white);
+}
+
+#bottomRightCont {
+    background-image: linear-gradient(white, #FAD0B8);
+    border-bottom-right-radius: 10px;
 }
