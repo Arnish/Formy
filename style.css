@@ -1,0 +1,36 @@
+html {
+    background-color: black;
+}
+
+#everything {
+    display: flex; /* this makes the right side... go to the right */
+    height: 90vh;
+    border-radius: 10px;
+    /* border: 3px solid blue; */
+    max-width: 70vw;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+#leftImageCont {
+    background-color: beige;
+    width: 20vw;
+    border: 2px solid black;
+}
+
+#rightSide {
+    display: flex;
+    flex-direction: column;
+}
+
+main > div{
+    background-color: grey;
+    border: 2px solid black;
+    height: calc(98.5vh/3); /* this makes all the divs even on the right side */
+    width: 50vw;
+}
