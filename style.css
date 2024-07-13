@@ -1,3 +1,10 @@
+* { /*resetter */
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 html {
     background-color: black;
 }
@@ -50,6 +57,9 @@ main > div{
 
 #middleRightCont {
     background-image: linear-gradient( #21788B , white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #bottomRightCont {
@@ -60,12 +70,20 @@ main > div{
 #mainForm {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-evenly;
-    gap: 10px 300px; */
+    gap: 30px;
+    /*below this line: styles the container of the form itself*/
+    max-width: 50%;
+    max-height: 50%;
 }
 
 form input { /*targets all the inputs inside form at the same time!*/
-    border-radius: 10px;
+    border: 1px solid salmon;
+    border-radius: 5px;
     padding: 10px;
     flex-grow: 1;
+}
+
+form input:focus {
+    box-shadow: 0px 6px 30px;
+    border:1px solid #FAD0B8;
 }
