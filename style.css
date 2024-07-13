@@ -56,3 +56,16 @@ main > div{
     background-image: linear-gradient(white, #FAD0B8);
     border-bottom-right-radius: 10px;
 }
+
+#mainForm {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly;
+    gap: 10px 300px; */
+}
+
+form input { /*targets all the inputs inside form at the same time!*/
+    border-radius: 10px;
+    padding: 10px;
+    flex-grow: 1;
+}
