@@ -53,6 +53,14 @@ main > div{
 #topRightCont {
     background-image: linear-gradient(#024059, #21788B);
     border-top-right-radius: 10px;
+    display: flex;
+    align-items:last baseline;
+    justify-content: center;
+}
+
+h1 {
+    color:white;
+    font-size: 5vh;
 }
 
 #middleRightCont {
@@ -65,25 +73,50 @@ main > div{
 #bottomRightCont {
     background-image: linear-gradient(white, #FAD0B8);
     border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:first baseline;
+}
+#createAcc {
+    padding: 20px;
+    width: 10vw;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: #21788B;
+    margin-top: 20px;
 }
 
 #mainForm {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 80px;
     /*below this line: styles the container of the form itself*/
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 70%;
+    max-height: 70%;
+}
+#phoneNumber {
+    order: 6;
+}
+/* this only looks good if you can nail the gradient colors perfectly, too much work*/
+/* #firstName, #lastName {
+    background-image:linear-gradient(#5998a6, #75abb7);
 }
 
-form input { /*targets all the inputs inside form at the same time!*/
-    border: 1px solid salmon;
+#email, #phoneNumber {
+    background-image:linear-gradient(#75abb7, #91c4ce) ;
+} */
+
+input { /*targets all the inputs inside form at the same time!*/
     border-radius: 5px;
     padding: 10px;
     flex-grow: 1;
+    border: none;
 }
 
-form input:focus {
-    box-shadow: 0px 6px 30px;
-    border:1px solid #FAD0B8;
+input:focus,
+input:focus-visible {
+    box-shadow: 0px 5px 10px #024059;
+    border:1px solid #024059;
+    outline: none; /*i was trying so hard to FIND THIS, this gets rid of the solid black outline when a text was selected */
 }
