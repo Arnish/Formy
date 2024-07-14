@@ -1,0 +1,1 @@
+// add a script to only apply the required class to input fields after submit is clicked!
