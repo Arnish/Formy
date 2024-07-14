@@ -19,17 +19,18 @@
         </div>
         <div id="middleRightCont">
           <form id="mainForm">
-            <input type="text" id="firstName" name="firstName" placeholder="First Name">
-            <input type="text" id="lastName" name="lastName" placeholder="Last Name">
-            <input type="email" id="email" name="email" placeholder="yourEmailHere@email.com">
-            <input type="number" id="phoneNumber" name="phoneNumber" placeholder="9 Digit Phone Number">
-            <input type="text" id="password" name="password" placeholder="Password">
-            <input type="text" id="password2" name="password2" placeholder="Confirm Password">
-          </form>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            <input type="email" id="email" name="email" placeholder="yourEmailHere@email.com" required>
+            <input type="number" id="phoneNumber" name="phoneNumber" placeholder="9 Digit Phone Number" minlength="9" required>
+            <input type="text" id="password" name="password" placeholder="Password" minlength="7" required>
+            <input type="text" id="password2" name="password2" placeholder="Confirm Password" minlength="7" required>
+          
         </div>
         <div id="bottomRightCont">
-          <button id="createAcc">Create Account</button>
+          <input type="submit" id="submitBtn">
         </div>
+      </form>
     </main>
 </body>
 </html>
