@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 * { /*resetter */
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 }
 
 html {
-    background-color: black;
+    background-color: #024059;
 }
 
 #everything {
@@ -42,16 +43,17 @@ html {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     height: 90vh; /*not sure why i had to re-state this here for it to be aligned with the left */
+    background-image: linear-gradient(#024059, #21788B, #67a5b3, #FAD0B8);
 }
 
 main > div{
     height: calc(100%/3); /* this makes all the divs even on the right side */
     width: 50vw;
-    border-style: none;
+    border: none;
 }
 
 #topRightCont {
-    background-image: linear-gradient(#024059, #21788B);
+   
     border-top-right-radius: 10px;
     display: flex;
     align-items:last baseline;
@@ -64,27 +66,18 @@ h1 {
 }
 
 #middleRightCont {
-    background-image: linear-gradient( #21788B , white);
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #bottomRightCont {
-    background-image: linear-gradient(white, #FAD0B8);
+   
     border-bottom-right-radius: 10px;
     display: flex;
     justify-content: center;
     align-items:first baseline;
-}
-#createAcc {
-    padding: 20px;
-    width: 10vw;
-    border-radius: 10px;
-    border: none;
-    color: white;
-    background-color: #21788B;
-    margin-top: 20px;
 }
 
 #mainForm {
@@ -95,9 +88,8 @@ h1 {
     max-width: 70%;
     max-height: 70%;
 }
-#phoneNumber {
-    order: 6;
-}
+
+
 /* this only looks good if you can nail the gradient colors perfectly, too much work*/
 /* #firstName, #lastName {
     background-image:linear-gradient(#5998a6, #75abb7);
@@ -112,11 +104,50 @@ input { /*targets all the inputs inside form at the same time!*/
     padding: 10px;
     flex-grow: 1;
     border: none;
+    background: transparent;
+    border-bottom: 2px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+#submitBtn {
+    padding: 20px;
+    max-width: 10vw;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: #21788B;
+    margin-top: 20px;
+}
+::placeholder {
+    color: white;
+    font-weight: bold;
 }
 
 input:focus,
 input:focus-visible {
     box-shadow: 0px 5px 10px #024059;
-    border:1px solid #024059;
-    outline: none; /*i was trying so hard to FIND THIS, this gets rid of the solid black outline when a text was selected */
+    border:1px solid white;
+    outline: none; /*i was trying so hard to FIND THIS, this gets rid of the solid black outline when an inpField was selected */
+}
+
+input:invalid {
+    border: 1px solid rgb(255, 56, 56);
+}
+
+input:valid {
+    border: 1px solid greenyellow;
+}
+
+input:-internal-autofill-selected {
+    background: transparent;
+    color: white;
+}
+
+/*when autocompleted it would turn background color white, this fixes that to make it transparent */
+input:-webkit-autofill { 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white;
 }
