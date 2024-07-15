@@ -42,6 +42,17 @@ inputs.forEach(elementInp => {             //for each element in the input nodel
     });
 });
 
+const passwordOne = document.getElementById("password");
+const confirmPass = document.getElementById("password2");
+const fName = document.getElementById("firstName");
+function greeted () {
+    if(passwordOne.value != confirmPass.value) {
+        alert("Passwords do not match");
+    }
+    else {
+        alert("Welcome " + fName.value);
+    }
+}
 
 // let nodeArray = Array.from(inputs);
 // console.log(nodeArray);
