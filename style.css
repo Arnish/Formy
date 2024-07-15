@@ -133,7 +133,10 @@ input:focus-visible {
     outline: none; /*i was trying so hard to FIND THIS, this gets rid of the solid black outline when an inpField was selected */
 }
 
-input:invalid {
+/* input:invalid:focus { /*without focus, the invalid border goes off automatically when opening a page
+    border: 1px solid rgb(255, 56, 56);
+}  */
+input.error { /*custom error status when something is invalid*/
     border: 1px solid rgb(255, 56, 56);
 }
 
